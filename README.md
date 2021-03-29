@@ -1,14 +1,14 @@
 # di_tool
 a bash tool written to simplify data migrations in macOS when time machine and/or migration assistant may not be suitable
 
-# best practice for use:
+# Best Practices for Use:
 - this tool should only be run AFTER fully setting up a new user account
   - you should make sure to launch all of the default apps once the account is set up (Safari, Contacts, Mail, Calendar, Photos, etc.)
   - this will populate the application dependencies in ~/Library that make the default Apple apps function
   - rsync may fail if these folders are not created before di_tool is run
 
 # Scope:
-- this tool is scripted work for transferring data between volumes on a local machine, however rsync can be modified to transfer files remotely as well
+- this tool is scripted to work for transferring data between volumes on a local machine, however rsync can be modified to transfer files remotely as well
 - currently, this tool transfers only default home folders and data from default Apple applications only
   - ie, Desktop, Documents, Downloads, Movies, Music, and Pictures folders
   - if there are additional folders you would like to transfer, you will have to add them in to the rsync functions at the end of the script
