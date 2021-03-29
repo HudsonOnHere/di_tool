@@ -128,10 +128,10 @@ done
 
 
 # Bulk data transfer from default home folders
-sudo rsync -avrz "$src/Destkop" "$src/Documents" "$src/Downloads" "$src/Movies" "$src/Music" "$src/Pictures" "$tgt/"
+sudo rsync -avr --progress "$src/Destkop" "$src/Documents" "$src/Downloads" "$src/Movies" "$src/Music" "$src/Pictures" "$tgt/"
 
 # Delete new application dependencies
 sudo rm -rf "$tgt/Library/Safari" "$tgt/Library/Calendars" "$tgt/Library/Mail" "$tgt/Library/Application\ Support/AddressBook"
 
 # Rebuild old application dependencies
-sudo rsync -avrz "$src/Library/Safari" "$src/Library/Calendars" "$src/Library/Mail" "$src/Library/" && sudo rsync -avrz "$src/Library/Application\ Support/AddressBook" "$tgt/Library/Application\ Support/AddressBook"
+sudo rsync -avr --progress "$src/Library/Safari" "$src/Library/Calendars" "$src/Library/Mail" "$tgt/Library/" && sudo rsync -avrz "$src/Library/Application\ Support/AddressBook" "$tgt/Library/Application\ Support/"
